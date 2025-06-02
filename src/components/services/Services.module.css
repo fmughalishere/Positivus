@@ -1,0 +1,84 @@
+.servicesSection {
+  padding: 2rem;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2rem;
+  color: #1a1a1a;
+}
+
+.description {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: #555;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-radius: 20px;
+  min-height: 160px;
+  height: auto;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.grayCard {
+  background-color: #f4f4f4;
+}
+
+.greenCard {
+  background-color: #d2ff4d;
+}
+
+.darkCard {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.infoButton {
+  margin-top: auto;
+  background: none;
+  border: none;
+  color: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+}
+.cardImage {
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-left: 1rem;
+}
+
+.cardText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
+
+.hero {
+  background: #fff;
+  padding: 0.5rem 0.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+.textBlock {
+  flex: 1;
+  min-width: 300px;
+}
+
+.textBlock h1 {
+    margin-top: 50px;
+  font-size: 3.75rem;
+  font-weight: 600;
+  color: #1c1c1c;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.textBlock p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #111111;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.cta {
+  padding: 1rem 2rem;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 3rem;
+}
+
+.cta:hover {
+  background-color: #000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logos {
+  display: flex;
+  grid-template-columns: repeat(3, auto);
+  gap: 2rem 4rem;
+  align-items: center;
+}
+
+.logos img {
+  margin-top: 100px;
+  height: 50px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: 0.3s ease;
+}
+
+.logos img:hover {
+  filter: none;
+  opacity: 1;
+}
+
+.imageBlock {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 200px;
+}
+
+.imageBlock img {
+  width: 700px;
+  height: 500px;
+  border-width: 1px;
+  margin-top: -150px;
+  border-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .textBlock h1 {
+    font-size: 2.5rem;
+  }
+
+  .textBlock p {
+    font-size: 1rem;
+  }
+
+  .logos {
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+  }
+
+  .imageBlock {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}

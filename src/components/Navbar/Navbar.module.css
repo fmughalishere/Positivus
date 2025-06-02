@@ -1,0 +1,58 @@
+.navbar {
+  background-color: #ffffff;
+  padding: 2rem 4rem;
+  font-family: 'Inter', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+img {
+  height: 32px;
+  width: auto;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #1c1c1c;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.menu li a:hover {
+  color: #74ef2d;
+}
+
+.quoteButton {
+  padding: 0.75rem 1.5rem;
+  border: 1.5px solid #1c1c1c;
+  background-color: transparent;
+  color: #1c1c1c;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quoteButton:hover {
+  background-color: #1c1c1c;
+  color: #ffffff;
+}
