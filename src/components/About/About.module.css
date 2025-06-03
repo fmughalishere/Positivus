@@ -57,6 +57,7 @@
 }
 
 .logos {
+  margin-bottom: 50px;
   display: flex;
   grid-template-columns: repeat(3, auto);
   gap: 2rem 4rem;

@@ -1,0 +1,74 @@
+.caseStudiesSection {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.headingContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 600;
+  background-color: #B9FF66;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.subheading {
+  font-size: 1rem;
+  color: black;
+  max-width: 500px;
+}
+
+.cardsContainer {
+  margin-top: 80px;
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #191A23;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.card {
+  background-color: transparent;
+  color: #fff;
+  padding: 1rem;
+  flex: 1;
+  min-width: 250px;
+  border-right: 1px solid white;
+}
+
+.card:last-child {
+  border-right: none;
+}
+
+.cardText {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.link {
+  color: #B9FF66;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;     
+  align-items: center;        
+  gap: 8px;                   
+}
+
+.image img {
+  width: 30px;
+  height: 20px;
+  object-fit: contain;
+}
+
+

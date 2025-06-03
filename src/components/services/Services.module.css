@@ -1,84 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
+
 .servicesSection {
-  padding: 2rem;
+  padding: 4rem 2rem;
   text-align: center;
+  background-color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .heading {
-  font-size: 2rem;
-  color: #1a1a1a;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 100%;
+  width: 178px;
+  height: 50px;
+  padding-right: 7px;
+  padding-left: 7px;
+  gap: 10px;
+  border-radius: 7px;
+  background: #B9FF66;
 }
 
 .description {
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  color: #555;
+  margin-left: 200px;
+  margin-top: -51px;
+  margin-bottom: 50px;
+  width: 580px;
+  height: 46px;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .cardGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  justify-content: center;
+  justify-items: center;
 }
 
 .card {
+  margin-top: 25px;
+  width: 600px;
+  height: 310px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
-  padding: 1rem 1.5rem;
-  border-radius: 20px;
-  min-height: 160px;
-  height: auto;
-  max-width: 600px;
-  margin: 0 auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-  transition: transform 0.2s ease-in-out;
+  border-radius: 45px;
+  padding: 50px;
+  border: 1px solid #191A23;
+  box-shadow: 0px 5px 0px 0px #191A23;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
 .grayCard {
-  background-color: #f4f4f4;
+  background-color: #F3F3F3;
+  color: #000000;
 }
 
 .greenCard {
-  background-color: #d2ff4d;
+  background-color: #B9FF66;
+  color: #000000;
 }
 
 .darkCard {
-  background-color: #1a1a1a;
-  color: white;
-}
-
-.label {
-  font-weight: bold;
-  margin-bottom: 1rem;
-  display: block;
-}
-
-.infoButton {
-  margin-top: auto;
-  background: none;
-  border: none;
-  color: inherit;
-  font-weight: 500;
-  cursor: pointer;
-  text-align: left;
-}
-.cardImage {
-  width: 120px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-left: 1rem;
+  background-color:#191A23;
+  color: #ffffff;
 }
 
 .cardText {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
 }
+.labelBox {
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 120%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.greenLabel {
+  font-weight: 500;
+  font-size: 20px;
+  background-color: #B9FF66;
+  color: #000000;
+  padding: 4px 12px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.whiteLabel {
+  font-weight: 500;
+  font-size: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 4px 12px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.infoButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: auto;
+  padding: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.infoButton:hover {
+  opacity: 0.8;
+}
+
+.arrowIcon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.cardImage {
+  position: absolute;
+  bottom: 70px;
+  right: 30px;
+  width: 210px;
+  height: 166px;
+  object-fit: contain;
+}
+.fullWidthCard {
+  grid-column: span 2;
+  width: 100%;
+  height: 350px;
+}
+
+.fullLabel {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 120%;
+  text-align: left;
+}
+.bottomBanner {
+  grid-column: span 2;
+  width: 100%;
+  height: 350px;
+  background-color: #F3F3F3;
+  border-radius: 45px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  padding: 0 50px;
+  position: relative;
+  margin-top: 100px;
+  gap: 0;
+  position: relative;
+}
+.bottomButton {
+  width: 288px;
+  height: 68px;
+  position: absolute;
+  left: 50px;
+  bottom: 40px;
+  padding: 14px 24px;
+  background-color: #191A23;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.bottomButton:hover {
+  background-color: #B9FF66;
+}
+.bottomImage {
+  margin-right: -60px;
+  height: 410px;   
+  object-fit: contain;
+  margin-left: auto;
+  position: relative;
+  top: -18px;         
+  bottom: -15px;
+  z-index: 10;   
+}
+.bottomHeading {
+  margin-bottom: 200px;
+  white-space: nowrap;     
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 120%;
+  width: fit-content;
+  height: auto;
+  padding: 10px 15px;
+  border-radius: 7px;
+  text-align: left;
+}
+
+.bottomDescription {
+  margin-left: -400px;
+  max-width: 580px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.5;
+  color: black;
+  text-align: left;
+}
+
