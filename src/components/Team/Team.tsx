@@ -61,24 +61,40 @@ const Team = () => {
           marketing strategies
         </p>
       </div>
+
       <div className={styles.teamGrid}>
         {teamMembers.map((member, index) => (
           <div key={index} className={styles.card}>
             <div className={styles.imageWrapper}>
-            <img src={member.image} alt={member.name} />
-            <div className={styles.image}>
-            <img src={Icon} alt="LinkedIn" />
-            </div>
+           <img
+            src={member.image}
+            alt={member.name}
+            className={styles.teamImage}
+             />
+            <div className={styles.linkedinIconWrapper}>
+           <img
+           src={Icon}
+           alt="LinkedIn"
+           className={styles.linkedinIcon}
+           />
+          </div>
            </div>
+            <div className={styles.textWrapper}>
             <h3>{member.name}</h3>
             <p className={styles.title}>{member.title}</p>
+            </div>
             <hr />
             <p className={styles.experience}>{member.experience}</p>
           </div>
         ))}
       </div>
+
+      <div className={styles.buttonWrapper}>
+        <button className={styles.viewAllButton}>See all team</button>
+      </div>
     </section>
   );
 };
+
 
 export default Team;

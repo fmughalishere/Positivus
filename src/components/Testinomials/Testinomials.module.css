@@ -1,0 +1,144 @@
+.testimonialSection {
+  padding: 80px 100px;
+  text-align: center;
+  background-color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.heading {
+  margin-right: 1000px;
+  font-size: 32px;
+  font-weight: 700;
+  color: black;
+  background-color: #c5ff55;
+  display: inline-block;
+  padding: 4px 16px;
+  border-radius: 6px;
+}
+
+.subheading {
+  margin-top: -40px;
+  margin-left: 120px;
+  font-size: 16px;
+  color: #333;
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  overflow: hidden;
+  max-width: 100%;
+  margin-top: 50px;
+  position: relative;
+}
+
+.sliderTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  max-width: 1240px;
+}
+
+.card {
+  min-width: 33.33%;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #0b0b0b;
+  color: white;
+  border: 1px solid #c5ff55;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.bubbleContainer {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+}
+
+.bubble {
+  width: 100%;
+  height: auto;
+}
+
+.textOnBubble {
+  position: absolute;
+  top: 12%;
+  left: 10%;
+  right: 10%;
+  bottom: 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.6;
+  color: white;
+  z-index: 1;
+  text-align: center;
+}
+
+.quote {
+  margin-bottom: 24px;
+  max-width: 90%;
+}
+
+.stars {
+  margin-bottom: 16px;
+}
+
+.name {
+  font-weight: bold;
+  color: #c5ff55;
+  margin-top: 12px;
+}
+
+.title {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.arrow {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background-color: #0b0b0b;
+  border: 2px solid #c5ff55;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.arrow:hover {
+  background-color: #c5ff55;
+}
+
+.starsIndicator {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.starIcon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+.activeStar {
+  filter: none;
+}

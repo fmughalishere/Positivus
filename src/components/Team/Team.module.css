@@ -8,11 +8,10 @@
 .header {
   text-align: center;
   margin-bottom: 3rem;
-  
 }
 
 .label {
-  margin-right: 1200px;
+  margin-right: 1000px;
   background-color: #c1f651;
   padding: 0.4rem 1rem;
   font-weight: 600;
@@ -23,11 +22,10 @@
 }
 
 .header p {
-  margin-bottom: 100px;
-  margin-left: 100px;
   margin-top: -40px;
+  margin-left: 120px;
   font-size: 1rem;
-  color: #444;
+  color: black;
   max-width: 600px;
 }
 
@@ -35,17 +33,20 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  justify-items: center;
 }
 
 .card {
-  width: 350px;
-  height: 400px;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
   background: #fff;
   border: 1.5px solid #000;
   border-radius: 1.5rem;
   padding: 2rem 1.5rem;
   box-shadow: 4px 4px 0 #000;
   transition: transform 0.3s ease;
+  position: relative;
 }
 
 .card:hover {
@@ -54,31 +55,9 @@
 
 .imageWrapper {
   position: relative;
-  width: fit-content;
-  margin-bottom: 1rem;
-}
-
-.imageWrapper img {
-  margin-bottom: -70px;
   width: 100px;
   height: 100px;
-  object-fit: cover;
-  padding: 0.3rem;
-}
-.card h3 {
-  align-items: center;
-  margin-left: 130px;
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 0.3rem;
-}
-
-.title {
-  justify-self: center;
-  margin-left: 100px;
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 0.7rem;
+  margin: 0 auto 1rem;
 }
 
 .card hr {
@@ -87,24 +66,78 @@
   margin: 0.8rem 0;
 }
 
-.experience {
-  font-size: 0.9rem;
-  color: black;
-  line-height: 1.5;
-  margin-top: 110px;
-}
-.image img {
-  border-radius: 100px;
-  margin-left: 250px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 24px;
-  height: 24px;
-  background-color: black;
+.buttonWrapper {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  object-fit: contain;
+  justify-content: flex-end;
+  margin-top: 2rem;
 }
 
+.viewAllButton {
+  background-color: black;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.viewAllButton:hover {
+  background-color: #333;
+}
+
+.teamImage {
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.linkedinIconWrapper {
+  margin-right: -70px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: black;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkedinIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.textWrapper {
+  text-align: left;
+  margin-left: 90px;
+  max-width: 220px; 
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.title {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+
+
+.experience {
+  font-size: 1rem;
+  color: black;
+  line-height: 1.6;
+  text-align: center;
+}
