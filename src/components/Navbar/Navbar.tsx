@@ -2,19 +2,22 @@ import { useState } from 'react';
 import styles from './Navbar.module.css';
 import StarBorder from '../StarBorder/StarBorder';
 import Logo from '../../assets/brand.svg';
-interface MenuItem {
-  id: string;
-  label: string;
-  description: string;
-}
 
-const menuItems: MenuItem[] = [
-  { id: 'about', label: 'About us', description: 'Learn more about our company and mission.' },
-  { id: 'services', label: 'Services', description: 'Discover the services we offer to our clients.' },
-  { id: 'use-cases', label: 'Use Cases', description: 'See how our product is used across industries.' },
-  { id: 'pricing', label: 'Pricing', description: 'Check out our affordable pricing plans.' },
-  { id: 'blog', label: 'Blog', description: 'Read the latest news and articles on our blog.' }
-];
+const dropdownItems: Record<string, string[]> = {
+  about: ['Our Mission', 'Our Team', 'Careers'],
+  services: ['Brand Stra', 'UI/UX Design', 'Digital Mark', 'SEO Opt'],
+  'use-cases': ['For Individuals', 'For Salons', 'For Retailers'],
+  pricing: ['Basic Plan', 'Pro Plan', 'Enterprise'],
+  blog: ['Latest Posts', 'Tutorials', 'Product Reviews'],
+};
+
+const labels: Record<string, string> = {
+  about: 'About us',
+  services: 'Services',
+  'use-cases': 'Use Cases',
+  pricing: 'Pricing',
+  blog: 'Blog'
+};
 
 const Navbar = () => {
   const [activeId, setActiveId] = useState<string | null>(null);
@@ -28,18 +31,26 @@ const Navbar = () => {
       <div className={styles.container}>
         <img src={Logo} alt="logo" />
         <ul className={styles.menu}>
-          {menuItems.map((item) => (
+          {Object.keys(dropdownItems).map((id) => (
             <li
-              key={item.id}
-              className={activeId === item.id ? styles.activeBorder : ''}
-              onClick={() => handleClick(item.id)}
+              key={id}
+              className={styles.menuItem}
+              onClick={() => handleClick(id)}
             >
               <StarBorder as="div" className="custom-class" color="cyan" speed="5s">
-                <a href={`#${item.id}`}>{item.label}</a>
+                <a href={`#${id}`}>{labels[id]}</a>
               </StarBorder>
 
-              {activeId === item.id && (
-                <p className={styles.description}>{item.description}</p>
+              {activeId === id && (
+                <div className={styles.dropdown}>
+                  <div className={styles.dropdownMenu}>
+                    {dropdownItems[id].map((label, index) => (
+                      <a key={index} href="#" className="dropdown-item">
+                        {label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
               )}
             </li>
           ))}

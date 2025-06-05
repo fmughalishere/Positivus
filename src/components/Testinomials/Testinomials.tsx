@@ -47,10 +47,6 @@ const Testimonials = () => {
       </p>
 
       <div className={styles.slider}>
-        <div className={styles.arrow} onClick={prev}>
-          <img src={LeftArrow} alt="Previous" />
-        </div>
-
         <div
           className={styles.sliderTrack}
           style={{
@@ -71,24 +67,14 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
-
-        <div className={styles.arrow} onClick={next}>
-          <img src={RightArrow} alt="Next" />
+        <div className={styles.arrowsRow}>
+          <div className={styles.arrow} onClick={prev}>
+            <img src={LeftArrow} alt="Previous" />
+          </div>
+          <div className={styles.arrow} onClick={next}>
+            <img src={RightArrow} alt="Next" />
+          </div>
         </div>
-      </div>
-
-      <div className={styles.starsIndicator}>
-        {testimonialsData.map((_, index) => (
-          <img
-            key={index}
-            src={Stars}
-            alt={`Star ${index + 1}`}
-            className={`${styles.starIcon} ${
-              index === current ? styles.activeStar : ""
-            }`}
-            onClick={() => setCurrent(index)}
-          />
-        ))}
       </div>
     </section>
   );
