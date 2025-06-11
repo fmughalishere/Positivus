@@ -1,9 +1,8 @@
 import { useState } from "react";
-import styles from "./Testinomials.module.css";
+import styles from "./Testimonials.module.css";
 import Bubble from "../../assets/Bubble.png";
 import RightArrow from "../../assets/Arrow right.png";
 import LeftArrow from "../../assets/Arrow left.png";
-import Stars from "../../assets/Vector.png";
 
 const testimonialsData = [
   {
@@ -22,8 +21,6 @@ const testimonialsData = [
     title: "Founder of TechNova",
   },
 ];
-
-const visibleCards = 3;
 
 const Testimonials = () => {
   const [current, setCurrent] = useState(0);
@@ -50,7 +47,7 @@ const Testimonials = () => {
         <div
           className={styles.sliderTrack}
           style={{
-            transform: `translateX(-${(100 / visibleCards) * current}%)`,
+            transform: `translateX(-${current * 100}%)`,
           }}
         >
           {testimonialsData.map((item, index) => (
@@ -59,21 +56,21 @@ const Testimonials = () => {
                 <img src={Bubble} alt="Bubble" className={styles.bubble} />
                 <div className={styles.textOnBubble}>
                   <p className={styles.quote}>{item.text}</p>
-                  <img src={Stars} alt="Stars" className={styles.stars} />
                   <p className={styles.name}>{item.name}</p>
                   <p className={styles.title}>{item.title}</p>
                 </div>
               </div>
+
+              <div className={styles.arrowsRow}>
+                <div className={styles.arrow} onClick={prev}>
+                  <img src={LeftArrow} alt="Previous" />
+                </div>
+                <div className={styles.arrow} onClick={next}>
+                  <img src={RightArrow} alt="Next" />
+                </div>
+              </div>
             </div>
           ))}
-        </div>
-        <div className={styles.arrowsRow}>
-          <div className={styles.arrow} onClick={prev}>
-            <img src={LeftArrow} alt="Previous" />
-          </div>
-          <div className={styles.arrow} onClick={next}>
-            <img src={RightArrow} alt="Next" />
-          </div>
         </div>
       </div>
     </section>

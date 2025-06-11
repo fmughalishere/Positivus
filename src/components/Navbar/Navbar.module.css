@@ -75,40 +75,33 @@ img {
   position: absolute;
   top: 100%;
   left: 0;
-  margin-top: 8px;
+  margin-top: 10px;
   z-index: 999;
-  width: 100%; 
+  width: max-content;
+  min-width: 180px;
 }
 
 .dropdownMenu {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
-  border: 1px solid rgba(200, 255, 150, 0.2);
+  background-color: white;
   border-radius: 10px;
   padding: 0.5rem 0;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  width: 100%;
-  min-width: unset;
-  max-width: 100%;
-  box-sizing: border-box;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
 }
 
-.dropdownMenu .dropdown-item {
+.dropdownItem {
   color: #1c1c1c;
-  font-size: 0.9rem;
-  padding: 0.5rem 1rem;
-  transition: background-color 0.2s ease;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, padding-left 0.2s ease;
   white-space: nowrap;
-  text-align: center;
-  border-bottom: 1px solid #a3d977;
-  box-sizing: border-box;
-  display: block;       
-  width: 100%;          
 }
 
-.dropdownMenu .dropdown-item:last-child {
-  border-bottom: none; 
+.dropdownItem:hover {
+  background-color: #f2f2f2;
+  padding-left: 1.75rem;
 }
-
-
