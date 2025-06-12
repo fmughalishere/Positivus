@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import styles from './Navbar.module.css';
 import StarBorder from '../StarBorder/StarBorder';
 import Logo from '../../assets/brand.svg';
+import Bars from '../../assets/bars.svg';
 
 const dropdownItems: Record<string, string[]> = {
   about: ['Our Story', 'The Team', 'Careers', 'Partners'],
@@ -11,16 +12,16 @@ const dropdownItems: Record<string, string[]> = {
     'UI/UX Design',
     'Content Creation',
     'SEO & Analytics',
-    'Marketing Campaigns'
+    'Marketing Campaigns',
   ],
   'use-cases': [
     'Startups & Entrepreneurs',
     'Small Businesses',
     'Creative Agencies',
-    'E-commerce Brands'
+    'E-commerce Brands',
   ],
   pricing: ['Startup Plan', 'Growth Plan', 'Custom Solutions'],
-  blog: ['Insights & Tips', 'Case Studies', 'Industry Trends']
+  blog: ['Insights & Tips', 'Case Studies', 'Industry Trends'],
 };
 
 const labels: Record<string, string> = {
@@ -28,36 +29,44 @@ const labels: Record<string, string> = {
   services: 'Services',
   'use-cases': 'Use Cases',
   pricing: 'Pricing',
-  blog: 'Blog'
+  blog: 'Blog',
 };
 
 const Navbar = () => {
   const [activeId, setActiveId] = useState<string | null>(null);
+  const [menuOpen, setMenuOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
 
   const handleClick = (id: string) => {
-    setActiveId(prev => (prev === id ? null : id));
+    setActiveId((prev) => (prev === id ? null : id));
   };
 
-  // Close dropdown on outside click
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+    setActiveId(null); 
+  };
+
   useEffect(() => {
     const handleOutsideClick = (e: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(e.target as Node)) {
         setActiveId(null);
+        setMenuOpen(false);
       }
     };
-
     document.addEventListener('mousedown', handleOutsideClick);
-    return () => {
-      document.removeEventListener('mousedown', handleOutsideClick);
-    };
+    return () => document.removeEventListener('mousedown', handleOutsideClick);
   }, []);
 
   return (
     <nav className={styles.navbar} ref={navRef}>
       <div className={styles.container}>
-        <img src={Logo} alt="logo" />
-        <ul className={styles.menu}>
+        <img src={Logo} alt="logo" className={styles.logo} />
+
+        <button className={styles.menuToggle} onClick={toggleMenu}>
+          <img src={Bars} alt="menu" />
+        </button>
+
+        <ul className={`${styles.menu} ${menuOpen ? styles.show : ''}`}>
           {Object.keys(dropdownItems).map((id) => (
             <li
               key={id}
@@ -80,8 +89,10 @@ const Navbar = () => {
               )}
             </li>
           ))}
+          <li>
+            <button className={styles.quoteButton}>Request a quote</button>
+          </li>
         </ul>
-        <button className={styles.quoteButton}>Request a quote</button>
       </div>
     </nav>
   );

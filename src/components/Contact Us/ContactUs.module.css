@@ -133,16 +133,84 @@
   background-color: #c5ff55;
   color: black;
 }
+
 .design {
   flex: 1;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
+  padding-right: 2rem; 
 }
 
+
 .contactImage {
-  width: 100%;
-  max-width: 700px;
+  max-width: 100%;
+  width: auto;
   height: auto;
   object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .contactBox {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .design {
+    justify-content: center;
+    padding-right: 0;
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .form {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .header p {
+    margin-left: 0;
+    margin-top: 1rem;
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .contactSection {
+    padding: 2rem 1rem;
+  }
+
+  .header h2 {
+    font-size: 24px;
+  }
+
+  .header p {
+    font-size: 14px;
+    margin-inline: 0;
+  }
+
+  .input,
+  .textarea,
+  .button {
+    font-size: 0.95rem;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .radioGroup {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .contactBox {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .contactImage {
+    max-width: 80%;
+  }
 }

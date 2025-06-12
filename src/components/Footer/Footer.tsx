@@ -1,26 +1,24 @@
 import React from 'react';
 import styles from './Footer.module.css';
-import Img1 from '../../assets/Social icon.png';      
+import Img1 from '../../assets/Social icon.png';       
 import Img2 from '../../assets/Social icon (1).png';   
 import Img3 from '../../assets/twitter.png';          
-import Img4 from '../../assets/Logo.png';             
+import Img4 from '../../assets/Logo.png';              
 
 const Footer: React.FC = () => {
   return (
-    <footer className={styles.footer}>
+    <div className={styles.footer}>
       <div className={styles.topSection}>
         <div className={styles.logoAndContact}>
           <div className={styles.logo}>
-            <img src={Img4} alt="Positivus Logo" className={styles.logoImage} />
+            <img className={styles.logoImage} src={Img4} alt="Logo" />
           </div>
           <div className={styles.contactBadge}>Contact us:</div>
           <div className={styles.contactInfo}>
-            <div>Email: info@positivus.com</div>
-            <div>Phone: 555-567-8901</div>
-            <div>
-              Address: 1234 Main St<br />
-              Moonstone City, Stardust State 12345
-            </div>
+            Email: info@positivus.com<br />
+            Phone: 555-567-8901<br />
+            Address: 1234 Main St<br />
+            Moonstone City, Stardust State 12345
           </div>
         </div>
 
@@ -39,14 +37,9 @@ const Footer: React.FC = () => {
             <img src={Img3} alt="Twitter" />
           </div>
           <div className={styles.newsletter}>
-            <label htmlFor="email">Subscribe to news</label>
+            <label>Subscribe to news</label>
             <div className={styles.inputGroup}>
-              <input
-                type="email"
-                id="email"
-                placeholder="Email"
-                className={styles.emailInput}
-              />
+              <input className={styles.emailInput} type="email" placeholder="Email" />
               <button className={styles.subscribeButton}>Subscribe to news</button>
             </div>
           </div>
@@ -54,12 +47,12 @@ const Footer: React.FC = () => {
       </div>
 
       <div className={styles.bottomSection}>
-        <div>© 2025 Positivus. All Rights Reserved.</div>
+        <div>© 2023 Positivus. All Rights Reserved.</div>
         <div className={styles.rightBottom}>
-          <a href="#" className={styles.privacyLink}>Privacy Policy</a>
+          <a className={styles.privacyLink} href="#">Privacy Policy</a>
         </div>
       </div>
-    </footer>
+    </div>
   );
 };
 

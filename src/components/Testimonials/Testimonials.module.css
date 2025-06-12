@@ -122,3 +122,67 @@
 .arrow:hover {
   background-color: #c5ff55;
 }
+
+
+@media (max-width: 992px) {
+  .testimonialSection {
+    padding: 60px 40px;
+  }
+
+  .heading {
+    margin-right: 0;
+    font-size: 28px;
+  }
+
+  .subheading {
+    margin-left: 0;
+    margin-top: 1rem;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .card {
+    padding: 30px 15px 25px;
+  }
+
+  .textOnBubble {
+    font-size: 15px;
+  }
+
+  .arrow {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonialSection {
+    padding: 40px 20px;
+  }
+
+  .heading {
+    font-size: 24px;
+    padding: 4px 12px;
+  }
+
+  .subheading {
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 25px 10px 20px;
+  }
+
+  .textOnBubble {
+    font-size: 14px;
+  }
+
+  .arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .arrowsRow {
+    gap: 20px;
+  }
+}

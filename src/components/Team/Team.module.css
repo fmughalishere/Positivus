@@ -141,3 +141,70 @@
   line-height: 1.6;
   text-align: center;
 }
+
+
+@media (max-width: 992px) {
+  .label {
+    margin-right: 0;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .header p {
+    margin-left: 0;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .textWrapper {
+    margin-left: 0;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .buttonWrapper {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .label {
+    font-size: 24px;
+    padding: 0.3rem 0.75rem;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+
+  .viewAllButton {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .teamImage {
+    height: 80px;
+  }
+
+  .linkedinIconWrapper {
+    width: 28px;
+    height: 28px;
+  }
+
+  .linkedinIcon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .experience {
+    font-size: 0.95rem;
+  }
+}

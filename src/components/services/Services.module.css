@@ -221,3 +221,120 @@
   text-align: left;
 }
 
+@media (max-width: 992px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .fullWidthCard,
+  .bottomBanner {
+    grid-column: span 1;
+  }
+
+  .labelBox {
+    font-size: 48px;
+  }
+
+  .bottomBanner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+
+  .bottomImage {
+    position: static;
+    margin-top: 2rem;
+    height: auto;
+    width: 100%;
+  }
+
+  .bottomButton {
+    position: static;
+    margin-top: 2rem;
+  }
+
+  .bottomHeading,
+  .bottomDescription {
+    text-align: left;
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .labelBox {
+    font-size: 36px;
+  }
+
+  .card {
+    padding: 30px;
+  }
+
+  .infoButton {
+    font-size: 18px;
+  }
+
+  .fullLabel {
+    font-size: 28px;
+  }
+
+  .bottomHeading {
+    font-size: 24px;
+  }
+
+  .bottomDescription {
+    font-size: 16px;
+  }
+
+  .bottomButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 26px;
+  }
+
+  .description {
+    font-size: 14px;
+    margin: 1rem auto 2rem;
+  }
+
+  .labelBox {
+    font-size: 28px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .infoButton {
+    font-size: 16px;
+  }
+
+  .bottomHeading {
+    font-size: 20px;
+  }
+
+  .bottomDescription {
+    font-size: 14px;
+  }
+
+  .bottomButton {
+    font-size: 16px;
+    padding: 10px 16px;
+  }
+
+  .bottomImage {
+    height: auto;
+    width: 100%;
+  }
+}
