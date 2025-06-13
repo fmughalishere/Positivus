@@ -1,0 +1,326 @@
+.pricingContainer {
+  width: 100%;
+  max-width: 1234px;
+  margin: 4rem auto;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.pricingTitle {
+  font-size: 64px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.pricingSubtitle {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 80px;
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.pricingCardsContainer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.pricingCard {
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 2rem;
+  background-color: #fff;
+  width: 350px;
+  text-align: start;
+  position: relative;
+  box-shadow: 4px 4px 0 #000;
+  transition: transform 0.3s ease;
+}
+
+.pricingCard.popular {
+  background-color: #191A23;
+  color: #fff;
+}
+
+.pricingCard:hover {
+  transform: translateY(-5px);
+}
+
+.planTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.planPrice {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.planDuration {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #555;
+}
+
+.badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #c1ff72;
+  color: #000;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.planBtn {
+  height: 60px;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.primary {
+  height: 60px;
+  background-color: #191A23;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.secondary {
+  height: 60px;
+  background-color: transparent;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.planBtn.primary:hover,
+.primaryGreen:hover {
+  background-color: #000;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.planBtn.quoteBtn:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+  transition: all 0.3s ease;
+}
+
+.pricingCardsContainer .pricingCard:nth-child(2) .quoteBtn:hover {
+  background-color: #fff;
+  color: #191A23;
+  border-color: #fff;
+}
+
+.featureList {
+  text-align: left;
+  margin-top: 1.5rem;
+  padding-left: 1rem;
+}
+
+.featureItem {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+.pricingSubtitle {
+  margin-top: -40px;
+  margin-bottom: 100px;
+  margin-left: 400px;
+  font-size: 1rem;
+  color: #000;
+}
+
+.faqquestion {
+  margin-bottom: 80px;
+  display: inline-block; 
+  background-color: #c1ff72;
+  font-size: 40px;
+  font-weight: 600;
+  padding: 0.2rem 1rem; 
+  border-radius: 8px; 
+}
+
+.faqTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.faqSubtitle {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.step {
+  border: 1px solid #000;
+  border-radius: 40px;
+  padding: 1.5rem 2rem;
+  background-color: #f3f3f3;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 4px 4px 0 #000;
+}
+
+.step.active {
+  background-color: #c1ff72;
+}
+
+.stepHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.number {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.stepTitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.icon {
+  background-color: #fff;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.divider {
+  height: 2px;
+  background-color: black;
+  width: 100%;
+  margin: 40px 0 20px;
+}
+
+.primaryGreen {
+  height: 60px;
+  background-color: #c1ff72 !important;
+  color: #000 !important; 
+  margin-bottom: 0.5rem;
+}
+
+
+.description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.quoteBtn {
+  border: 2px solid black;
+  background-color: transparent;
+  color: #000;
+}
+
+.pricingCardsContainer .pricingCard:nth-child(2) .quoteBtn {
+  color: white;
+  border-color: white;
+}
+
+@media (max-width: 992px) {
+  .pricingSubtitle {
+    margin-left: 0;
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .stepHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .number {
+    font-size: 1.5rem;
+  }
+
+  .stepTitle {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .pricingTitle {
+    font-size: 1.5rem;
+  }
+
+  .pricingSubtitle {
+    font-size: 0.95rem;
+  }
+
+  .step {
+    padding: 1rem;
+    border-radius: 30px;
+  }
+
+  .stepTitle {
+    font-size: 0.95rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon img {
+    width: 50px;
+    height: 50px;
+  }
+}

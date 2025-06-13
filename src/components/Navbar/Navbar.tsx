@@ -1,27 +1,16 @@
 import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import StarBorder from '../StarBorder/StarBorder';
 import Logo from '../../assets/brand.svg';
 import Bars from '../../assets/bars.svg';
 
 const dropdownItems: Record<string, string[]> = {
-  about: ['Our Story', 'The Team', 'Careers', 'Partners'],
-  services: [
-    'Brand Strategy',
-    'Web Design',
-    'UI/UX Design',
-    'Content Creation',
-    'SEO & Analytics',
-    'Marketing Campaigns',
-  ],
-  'use-cases': [
-    'Startups & Entrepreneurs',
-    'Small Businesses',
-    'Creative Agencies',
-    'E-commerce Brands',
-  ],
-  pricing: ['Startup Plan', 'Growth Plan', 'Custom Solutions'],
-  blog: ['Insights & Tips', 'Case Studies', 'Industry Trends'],
+  about: ['Our Impact', 'Our Journey', 'Core Values', 'Awards and Recognition'],
+  services: ['SEO & Analytics', 'Use Cases', 'Our other services'],
+  'use-cases': ['All success stories', 'Testimonials'],
+  pricing: ['FAQs'],
+  blog: ['Explore more insights'],
 };
 
 const labels: Record<string, string> = {
@@ -43,7 +32,7 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
-    setActiveId(null); 
+    setActiveId(null);
   };
 
   useEffect(() => {
@@ -74,15 +63,20 @@ const Navbar = () => {
               onClick={() => handleClick(id)}
             >
               <StarBorder as="div" className="custom-class" color="cyan" speed="5s">
-                <a href={`#${id}`}>{labels[id]}</a>
+                <Link to={`/${id}`}>{labels[id]}</Link>
               </StarBorder>
+
               {activeId === id && (
                 <div className={styles.dropdown}>
                   <div className={styles.dropdownMenu}>
                     {dropdownItems[id].map((label, index) => (
-                      <a key={index} href="#" className={styles.dropdownItem}>
+                      <Link
+                        key={index}
+                        to={`/${id}`} 
+                        className={styles.dropdownItem}
+                      >
                         {label}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
