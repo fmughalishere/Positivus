@@ -24,11 +24,6 @@ const ContactUs: React.FC = () => {
   return (
     <section className={styles.contactSection}>
       <div className={styles.container}>
-        <div className={styles.header}>
-          <h2>Contact Us</h2>
-          <p>Connect with Us. Let’s Discuss Your Digital Marketing Needs</p>
-        </div>
-
         <div className={styles.contactBox}>
           <form className={styles.form}>
             <div className={styles.radioGroup}>
@@ -63,7 +58,7 @@ const ContactUs: React.FC = () => {
 
             <div className={styles.inputGroup}>
               <label htmlFor="email">Email*</label>
-              <input id="email" type="email" placeholder="Email" className={styles.input} />
+              <input id="email" type="email" placeholder="Email" className={styles.input} required />
             </div>
 
             <div className={styles.inputGroup}>
@@ -74,6 +69,7 @@ const ContactUs: React.FC = () => {
                 className={styles.textarea}
                 value={message}
                 onChange={handleMessageChange}
+                required
               ></textarea>
             </div>
 
@@ -81,7 +77,7 @@ const ContactUs: React.FC = () => {
           </form>
 
           <div className={styles.design}>
-            <img src={Img1} alt="design" className={styles.contactImage} />
+            <img src={Img1} alt="Abstract geometric design" className={styles.contactImage} />
           </div>
         </div>
       </div>

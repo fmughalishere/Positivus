@@ -1,4 +1,5 @@
 import styles from './About.module.css';
+import { Link } from 'react-router-dom';
 import heroImg from '../../assets/Illustration.png';
 import amazon from '../../assets/company/company-logo1.svg';
 import dribbble from '../../assets/company/company-logo2.svg';
@@ -20,7 +21,9 @@ export default function About() {
           <p>
             Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.
           </p>
-          <button className={styles.cta}>Book a consultation</button>
+          <Link to="/" className={styles.cta}>
+               Book a consultation
+                </Link>
 
           <div className={styles.logos}>
             <img src={zoom} alt="Zoom" />
